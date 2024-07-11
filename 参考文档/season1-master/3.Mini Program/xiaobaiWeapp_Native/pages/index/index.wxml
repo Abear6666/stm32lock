@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="wrapper">
+  <view class="header-wrapper">
+    <view class="header-title">
+      <text>空气质量-{{ airText }}</text>
+      <text>{{ area }}-{{ city }}</text>
+    </view>
+    <view class="header-text">
+      <text>{{ airValue }}</text>
+      <text>{{ weather }}</text>
+    </view>
+    <view class="weather-advice">{{ weatherAdvice }}</view>
+  </view>
+  <view class="body-wrapper">
+    <view class="body">
+      <view class="data-wrapper">
+        <view class="data">
+          <image class="data-logo" src="/static/images/wendu.png" />
+          <view class="data-text">
+            <view class="data-title">温度</view>
+            <view class="data-value">{{ Temp }}℃</view>
+          </view>
+        </view>
+        <view class="data">
+          <image class="data-logo" src="/static/images/shidu.png" />
+          <view class="data-text">
+            <view class="data-title">湿度</view>
+            <view class="data-value">{{ Hum }}%</view>
+          </view>
+        </view>
+      </view>
+      <view class="data-wrapper">
+        <view class="data">
+          <image class="data-logo" src="/static/images/guangzhaodu.png" />
+          <view class="data-text">
+            <view class="data-title">光照度</view>
+            <view class="data-value">{{ Light }}Lx</view>
+          </view>
+        </view>
+        <view class="data">
+          <image class="data-logo" src="/static/images/led.png" />
+          <view class="data-text">
+            <view class="data-title">客厅灯</view>
+            <view class="data-value">
+              <switch bind:change="onLedChange" checked="{{Led}}" color="#3d7ef9" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="data-wrapper">
+        <view class="data">
+          <image class="data-logo" src="/static/images/beep.png" />
+          <view class="data-text">
+            <view class="data-title">报警器</view>
+            <view class="data-value">
+              <switch bind:change="onBeepChange" checked="{{Beep}}" color="#3d7ef9" />
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,43 @@
+/* pages/login/index.wxss */
+.header {
+  height: 100px;
+  padding: 25px 0;
+  background-color: #3d7ef9;
+
+}
+.header-title {
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+  margin-left: 20px;
+}
+.header-info {
+  font-size: 14px;
+  color: #fff;
+  margin-left: 20px;
+}
+.body {
+  padding: 20px;
+  margin-top: -20px;
+  border-radius: 15px 15px 0 0;
+  background-color: #fff;
+
+}
+.login-form {
+  margin-bottom: 30px;
+}
+.other-option {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: #9f9f9f;
+}
+.copyright-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.copyright {
+  color: #d6d6d6;
+  position: fixed;
+  bottom: 50px;
+}

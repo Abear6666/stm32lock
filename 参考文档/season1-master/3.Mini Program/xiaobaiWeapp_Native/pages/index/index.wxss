@@ -1,0 +1,68 @@
+/**index.wxss**/
+.wrapper {
+  padding: 15px;
+}
+
+.header-wrapper {
+  background-color: #3d7ef9;
+  border-radius: 20px;
+  color: #fff;
+  box-shadow: #d6d6d6 0px 0px 5px;
+  padding: 15px 30px;
+}
+
+.header-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-text {
+  font-size: 32px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-advice {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.data-wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.data {
+  background-color: #fff;
+  width: 150px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 8px;
+  box-shadow: #d6d6d6 0px 0px 5px;
+
+}
+
+.data-logo {
+  height: 36px;
+  width: 36px;
+  margin-top: 15px;
+}
+
+.data-text {
+  margin-top: 15px;
+  color: #7f7f7f;
+
+}
+
+.data-title {
+  text-align: right;
+}
+
+.data-value {
+  font-size: 26px;
+}

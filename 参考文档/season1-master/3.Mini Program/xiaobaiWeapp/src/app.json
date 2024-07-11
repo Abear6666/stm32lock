@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/login/main",
+    "pages/index/main",
+    "pages/logs/main"  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "挽救小白",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于天气效果展示"
+    }
+  },
+  "tabBar": {
+    "color": "#999",
+    "backgroundColor": "#fafafa",
+    "selectedColor": "#3d7ef9",
+    "borderStyle": "white",
+
+    "list": [{
+      "text": "",
+      "pagePath": "pages/index/main",
+      "iconPath": "static/tabs/home.png",
+      "selectedIconPath": "static/tabs/home-active.png"
+    }, {
+      "text": "",
+      "pagePath": "pages/logs/main",
+      "iconPath": "static/tabs/orders.png",
+      "selectedIconPath": "static/tabs/orders-active.png"
+    }],
+    "position": "bottom"
+  },
+  "usingComponents": {
+    "van-button": "vant-weapp/dist/button/index",
+    "van-field": "vant-weapp/dist/field/index",
+    "van-toast": "vant-weapp/dist/toast/index",
+    "van-dialog": "vant-weapp/dist/dialog/index",
+    "van-icon": "vant-weapp/dist/icon/index"
+  }
+}

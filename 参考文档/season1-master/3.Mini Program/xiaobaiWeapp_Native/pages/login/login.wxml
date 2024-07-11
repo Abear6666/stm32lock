@@ -1,0 +1,56 @@
+<!--pages/login/index.wxml-->
+
+<view>
+  <!-- 顶部header -->
+  <view class="header">
+    <view wx:if="{{isLogin}}">
+      <view class="header-title">请登录</view>
+      <view class="header-info">Please Login Your Account</view>
+    </view>
+    <view wx:else>
+      <view class="header-title">请注册</view>
+      <view class="header-info">Please Register Your Account</view>
+    </view>
+  </view>
+  <!-- 主体body -->
+  <view class="body">
+    <!-- 登陆表单 -->
+    <view class="login-form">
+      <van-field placeholder="请输入用户名" model:value="{{inputUserName}}" />
+      <van-field type="password" placeholder="请输入密码" model:value="{{inputPassWord}}" />
+      <!-- 绑定手机号输入框 -->
+      <view wx:if="{{!isLogin}}">
+        <van-field placeholder="请输入找回密码绑定手机号" model:value="{{inputContect}}"  />
+      </view>
+    </view>
+    <!-- 登陆/注册按钮 -->
+    <van-button slot="button" round block color="#3d7ef9" bind:click="onClick">{{isLogin?'登陆':'注册'}}</van-button>
+    <!-- 切换按钮和忘记密码按钮 -->
+    <view class="other-option">
+      <view bindtap="onOptionClick">
+        <text>{{isLogin?'注册账户':'登陆账户'}}</text>
+      </view>
+      <text style="margin: 0 30px">|</text>
+      <view bindtap="onForgetClick">
+        <text>忘记密码</text>
+      </view>
+    </view>
+    <!-- 版权 -->
+    <view class="copyright-wrapper">
+      <text class="copyright">Power By LuoB</text>
+    </view>
+    <!-- 安全校验提示框 -->
+    <van-dialog use-slot title="找回密码校验" show="{{showFindPW}}" show-cancel-button transition="fade"
+      bind:confirm="onFindPWConfirm" bind:cancel="onFindPWCancel">
+      <van-field label="手机号" title-width="60px" placeholder="请输入找回密码绑定手机号" model:value="{{inputContect}}"/>
+    </van-dialog>
+    <!-- 重置密码提示框 -->
+    <van-dialog use-slot title="重置密码" show="{{showResetPW}}" show-cancel-button transition="fade"
+      bind:confirm="onResetPWConfirm" bind:cancel="onResetPWCancel">
+      <van-field label="用户名" title-width="60px" model:value="{{inputUserName}}" readonly />
+      <van-field label="新密码" type="password" title-width="60px" placeholder="请输入新密码" model:value="{{inputPassWord}}"/>
+    </van-dialog>
+    <!-- 轻提示 -->
+    <van-toast id="van-toast" />
+  </view>
+</view>
